@@ -1,0 +1,125 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+body{
+    background-color: var(--background-headings-buttons);
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 300px;
+}
+
+.card{
+    padding: 2rem 2rem 1rem;
+    color: var(--paragraphs);
+}
+
+.card--sedans{
+    background-color: var(--Bright-orange);
+    border-radius: .5rem .5rem 0 0;
+}
+
+.card--suvs{
+    background-color: var(--Dark-cyan);
+}
+
+.card--luxury{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 0 .5rem .5rem;
+}
+
+.title{
+    margin: 1rem 0;
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.text{
+    line-height: 2;
+}
+
+.btn-more{
+    display: inline-block;
+    background-color: var(--background-headings-buttons);
+    width: 150px;
+    padding: .8rem ;
+    margin: 1.5rem 0 2rem;
+    border-radius: 2rem;
+    border: 2px solid #fff;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.btn--sedans{
+    color: var(--Bright-orange);
+}
+
+.btn--suvs{
+    color: var(--Dark-cyan);
+}
+
+.btn--luxury{
+    color: var(--Very-dark-cyan);
+}
+
+ @media screen and (min-width: 1200px) {
+
+    .container{
+        width: 900px;
+        flex-flow: row nowrap;
+    }
+
+    .card--sedans{
+        border-radius: .5rem 0 0 .5rem;
+    }
+
+    .card--luxury{
+        border-radius: 0 .5rem .5rem 0;
+    }
+
+    .card{
+        padding-right: 3rem ;
+        padding-left: 3rem;
+    }
+
+    .title{
+        margin: 2rem 0;
+        font-size: 2.5rem;
+    }
+
+    .btn-more{
+        margin-top: 5rem;
+    }
+
+    .btn-more:hover{
+        background-color: transparent;
+        color: #fff;
+        transition: background .3s linear, color .3s linear;
+    }
+
+
+ }
